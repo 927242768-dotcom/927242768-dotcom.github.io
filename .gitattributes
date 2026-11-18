@@ -1,0 +1,4 @@
+# 发布产物不计入源码语言统计，不改变文件内容或换行。
+*.js linguist-generated=true
+*.css linguist-generated=true
+*.html linguist-generated=true

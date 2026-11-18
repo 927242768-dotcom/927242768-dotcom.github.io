@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 到源码仓库反馈问题
+    url: https://github.com/927242768-dotcom/last-round-cs/issues/new/choose
+    about: 网页、后台和构建问题集中在源码仓库维护。
+  - name: 阅读维护文档
+    url: https://github.com/927242768-dotcom/last-round-cs/tree/main/docs
+    about: 开发、发布、作品管理与常见问题。
