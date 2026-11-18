@@ -19,16 +19,6 @@
       "video": "/media/round-02.mp4",
       "order": 2,
       "published": true
-    },
-    {
-      "title": "部署验证草稿",
-      "description": "管理后台实际保存验证",
-      "category": "CS2 实战",
-      "poster": "/media/round-01.webp",
-      "video": "/media/round-01.mp4",
-      "order": 999,
-      "published": false,
-      "id": "3909268f-3306-4cc6-b810-e204fbf7cc94"
     }
   ]
 }
