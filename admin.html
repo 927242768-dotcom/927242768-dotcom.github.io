@@ -7,6 +7,7 @@
   <meta name="robots" content="noindex">
   <title>作品管理 · 残局之后</title>
   <link rel="stylesheet" href="/admin.css">
+  <script src="/github-backend.js" defer></script>
   <script src="/admin.js" defer></script>
 </head>
 <body>
@@ -23,15 +24,16 @@
   <main class="page" id="main">
     <section class="login panel" id="login-panel" aria-labelledby="login-title" hidden>
       <h1 id="login-title">作品管理</h1>
-      <p class="muted">输入管理密码进入后台。</p>
+      <p class="muted">使用本站仓库的 GitHub 访问令牌登录。</p>
       <form id="login-form">
         <label class="field" for="password">
-          <span>管理密码</span>
-          <input id="password" name="password" type="password" autocomplete="current-password" required>
+          <span>GitHub 访问令牌</span>
+          <input id="password" name="password" type="password" autocomplete="off" placeholder="github_pat_…" required>
         </label>
         <p class="feedback" id="login-message" role="status" hidden></p>
         <button class="button button-primary" type="submit" id="signin">登录</button>
       </form>
+      <details class="muted" style="margin-top:24px;line-height:1.8"><summary>首次登录：创建本站专用令牌</summary><p>打开<a href="https://github.com/settings/personal-access-tokens/new?name=LAST%20ROUND%20Admin&amp;target_name=927242768-dotcom&amp;contents=write&amp;metadata=read&amp;expires_in=30" target="_blank" rel="noopener noreferrer"> GitHub 令牌设置</a>，在 Repository access 中选择 Only select repositories，仅选择 <strong>927242768-dotcom.github.io</strong>，并确认 Contents 为 Read and write。生成后复制到上方登录。</p><p>令牌仅保留在当前页面内存，刷新或退出后清除。作品保存在你的 GitHub 仓库，保存后需等待 GitHub 完成网站发布。草稿不在前台展示，但公开仓库中的文件仍可被访问。</p></details>
     </section>
 
     <section class="dashboard" id="dashboard" aria-labelledby="dashboard-title" hidden>

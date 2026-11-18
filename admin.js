@@ -345,7 +345,7 @@ workForm.addEventListener("submit", async (event) => {
     const saved = applyWork(response);
     editor.close();
     renderWorks(String(saved.id), "edit");
-    feedback(dashboardMessage, `已保存「${saved.title}」。`, "success");
+    feedback(dashboardMessage, `已保存「${saved.title}」。网站将在 GitHub 发布完成后更新。`, "success");
   } catch (error) {
     handleOperationError(error, find("editor-message"));
   } finally {
@@ -359,8 +359,8 @@ for (const field of Object.values(media)) {
     const file = field.file.files[0];
     if (!file) return;
     field.file.value = "";
-    if (file.size === 0 || file.size > 90 * 1024 * 1024) {
-      feedback(field.message, "请选择非空文件，单个文件最大 90 MiB。", "error");
+    if (file.size === 0 || file.size > 25 * 1024 * 1024) {
+      feedback(field.message, "请选择非空文件，单个文件最大 25 MiB。", "error");
       return;
     }
     if (!field.allowed.includes(file.type)) {
